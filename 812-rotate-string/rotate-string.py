@@ -6,8 +6,7 @@ class Solution:
             return False
         i = 0
         while(i < len(s)):
-            left = rotated[0]
-            rotated = rotated[1:] + left
+            rotated = rotated[1:] + rotated[0]
             if rotated == goal:
                 return True
             i += 1
