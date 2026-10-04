@@ -1,9 +1,8 @@
 class Solution:
     def check(self, nums: list[int]) -> bool:
-        rotated = []
+        target = sorted(nums)
         for i in range(len(nums)):
-            rotated = nums[i:] + nums[:i]
-            if rotated == sorted(nums):
+            if nums[i:] + nums[:i] == target:
                 return True
         return False
         
