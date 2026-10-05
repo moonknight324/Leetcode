@@ -7,10 +7,10 @@ class Solution:
         for i in nums:
             freq[i] = freq.get(i, 0) + 1
 
-        items = sorted(freq.items(), key=lambda item: item[1])  # list of (num, count)
+        items = sorted(freq.items(), key=lambda item: item[1])
 
         res = []
         n = len(items)
         for i in range(k):
-            res.append(items[n - i - 1][0])  # [0] picks the number, not the count
+            res.append(items[n - i - 1][0]) 
         return res
